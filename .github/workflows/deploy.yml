@@ -1,0 +1,62 @@
+name: CI/CD Astro Cloudflare Pages
+
+# GitHub só executa workflows em .github/workflows/ NA RAIZ do repo.
+# O código Astro mora em website/ → tudo roda com working-directory: website.
+on:
+  push:
+    branches:
+      - main
+      - staging
+    paths:
+      - 'website/**'
+      - '.github/workflows/deploy.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'website/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: website
+
+jobs:
+  build-and-test:
+    name: Validação & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Checagem de Tipos e Sintaxe Astro
+        run: npx astro check
+
+      - name: Build de Produção
+        run: npm run build
+
+      - name: Deploy no Cloudflare Pages
+        if: github.event_name == 'push'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: website
+          command: pages deploy ./dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --commit-hash=${{ github.sha }}

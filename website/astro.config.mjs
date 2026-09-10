@@ -4,12 +4,18 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // 🚀 Astro 7.x + Cloudflare Pages/Workers
+  // 🚀 Astro 7.x + Cloudflare Pages — output estático (sem worker).
+  // Modo 'static' gera dist/ puro e evita o erro de validação do wrangler
+  // "The name 'ASSETS' is reserved in Pages projects" (binding injetado
+  // pelo worker .prerender do adapter em modo SSR). As rotas /api
+  // passam a Pages Functions quando migradas para functions/.
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
     },
+    imageService: 'compile',
   }),
+  output: 'static',
 
   // 🎨 Tailwind CSS v4 via Vite Plugin de alta velocidade (Oxide Engine)
   vite: {
