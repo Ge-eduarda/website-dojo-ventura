@@ -1,0 +1,27 @@
+{
+  "name": "dojoventura-website",
+  "type": "module",
+  "version": "7.0.0",
+  "description": "Boilerplate Astro 7.3.2 + Tailwind CSS v4.3 + Cloudflare Pages & Workers",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy ./dist"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/cloudflare": "^14.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.130.0"
+  }
+}

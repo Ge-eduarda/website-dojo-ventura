@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { athletes } from '../data/dojo';
+---
+
+<Layout
+  title="Atletas — Dojo Ventura | Alto desempenho do Oeste Paulista"
+  description="Conheça os atletas de alto desempenho do Dojo Ventura (Regente Feijó): representantes do Oeste Paulista em torneios pelo Brasil, incluindo convocado para a Seleção Brasileira."
+>
+  <section class="border-b border-line bg-white text-ink">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold-600">Dojo Ventura · Regente Feijó</p>
+      <h1 class="mt-2 font-display text-fluid-h1 font-extrabold text-ink uppercase">Nossos atletas</h1>
+      <p class="mt-3 max-w-2xl text-ink-soft">Alto desempenho com raiz social: cada nome aqui carrega o Oeste Paulista no peito. Medalhas e históricos em confirmação pelo responsável — nada publicado sem validação.</p>
+      <a href="/apoiar" class="mt-6 inline-flex min-h-[48px] items-center bg-brand-600 px-8 font-bold text-white shadow-hard transition hover:bg-brand-700">Apadrinhar um atleta</a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {athletes.map((a) => (
+        <article class="border border-line bg-white p-6 shadow-hard">
+          <div class="flex h-28 items-center justify-center border border-line bg-surface-alt text-5xl" aria-hidden="true">🥋</div>
+          <p class="mt-2 text-center text-xs text-ink-muted">Foto do atleta — aguardando material real</p>
+          <h2 class="mt-4 font-display text-fluid-h2 font-bold text-ink uppercase">{a.name}</h2>
+          <p class="text-sm text-ink-muted">{a.category}</p>
+          {a.badge && (<p class="mt-2 inline-flex border border-gold-500 bg-surface-alt px-3 py-1 text-xs font-bold text-gold-600">★ {a.badge}</p>)}
+          <h3 class="mt-4 font-display text-fluid-h3 font-bold text-ink uppercase">Conquistas confirmadas</h3>
+          <ul class="mt-1 space-y-1 text-sm text-ink-soft">
+            {a.achievements.map((t) => (<li>• {t}</li>))}
+          </ul>
+          <a href="/apoiar" class="mt-4 inline-block text-sm font-bold text-brand-600 hover:text-brand-700">Apoiar este atleta →</a>
+        </article>
+      ))}
+    </div>
+    <p class="mt-10 text-center text-sm text-ink-muted">É responsável pelo dojo? Envie nomes, categorias, fotos e medalhas (ano/torneio) para publicarmos aqui.</p>
+  </section>
+</Layout>

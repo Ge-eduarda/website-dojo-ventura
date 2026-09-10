@@ -1,0 +1,50 @@
+---
+interface Props {
+  phoneNumber: string; // Ex: "5511999999999"
+  message?: string;
+  buttonText?: string;
+  showCallButton?: boolean;
+  telephoneNumber?: string;
+}
+
+const {
+  phoneNumber,
+  message = 'Olá! Vim pelo site e gostaria de solicitar um orçamento.',
+  buttonText = 'Falar no WhatsApp',
+  showCallButton = true,
+  telephoneNumber,
+} = Astro.props;
+
+const cleanPhone = phoneNumber.replace(/\D/g, '');
+const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+const telUrl = telephoneNumber ? `tel:${telephoneNumber.replace(/\D/g, '')}` : `tel:${cleanPhone}`;
+---
+
+<!-- Barra Fixa de Conversão Mobile (Sticky CTA) - Visível apenas em smartphones -->
+<div class="fixed bottom-0 left-0 right-0 z-40 block border-t border-line bg-white p-3 shadow-hard sm:hidden">
+  <div class="flex items-center gap-2">
+    {showCallButton && (
+      <a
+        href={telUrl}
+        aria-label="Ligar agora"
+        class="flex h-11 w-11 flex-shrink-0 items-center justify-center border border-line bg-surface-alt text-ink transition hover:border-brand-600 hover:text-brand-700"
+      >
+        <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+    )}
+
+    <a
+      href={waUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex-1 inline-flex h-11 items-center justify-center gap-2 bg-brand-600 px-4 text-sm font-bold text-white shadow-hard transition hover:bg-brand-700 active:scale-95"
+    >
+      <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.301-.15-1.782-.879-2.057-.979-.276-.1-.477-.15-.678.15-.2.301-.778.979-.954 1.18-.175.201-.351.226-.652.076-.301-.15-1.27-.468-2.42-1.493-.894-.799-1.499-1.786-1.674-2.087-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.201-.301.301-.502.1-.201.05-.376-.025-.527-.075-.15-.678-1.632-.929-2.234-.244-.587-.492-.508-.678-.517-.176-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.109.15.201 2.122 3.24 5.141 4.542.718.31 1.278.495 1.716.634.72.229 1.375.197 1.892.12.578-.087 1.782-.728 2.032-1.431.251-.703.251-1.305.176-1.431-.075-.125-.276-.201-.577-.351z"/>
+      </svg>
+      <span>{buttonText}</span>
+    </a>
+  </div>
+</div>

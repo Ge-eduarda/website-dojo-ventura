@@ -1,0 +1,26 @@
+---
+/**
+ * ⚡ Server Island Exemplar — SanBernarda Standard
+ * Renderiza dados dinâmicos/personalizados diretamente da Edge sem destruir o TTFB estático.
+ * Uso na página:
+ * <DynamicIsland server:defer>
+ * <div slot="fallback" class="animate-pulse bg-slate-200 h-10 "></div>
+ * </DynamicIsland>
+ */
+
+// Simula busca em banco Cloudflare D1 ou API externa de borda
+const serverTime = new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+---
+
+<div class=" border border-brand-500/20 bg-brand-500/5 p-4 text-sm">
+ <div class="flex items-center gap-2 font-medium text-brand-600 ">
+ <span class="relative flex h-2 w-2">
+ <span class="absolute inline-flex h-full w-full animate-ping bg-emerald-400 opacity-75"></span>
+ <span class="relative inline-flex h-2 w-2 bg-surface-alt0"></span>
+ </span>
+ Status da Borda Cloudflare (Server Island Ativa)
+ </div>
+ <p class="mt-1 text-ink-soft ">
+ Horário sincronizado na Edge: <strong class="text-ink ">{serverTime}</strong> (Zero impacto no TTFB inicial).
+ </p>
+</div>

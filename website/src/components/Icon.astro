@@ -1,0 +1,24 @@
+---
+/**
+ * ⚡ Icon.astro — Sprite de Ícones com <symbol>
+ * Reduz dezenas de requisições SVG para 1 único request HTTP cacheável pelo navegador.
+ * Uso: <Icon name="sparkles" class="h-6 w-6 text-brand-600" />
+ */
+interface Props {
+  name: string;
+  class?: string;
+  size?: number;
+}
+
+const {
+  name,
+  class: className = 'h-5 w-5',
+  size,
+} = Astro.props;
+
+const style = size ? `width: ${size}px; height: ${size}px;` : undefined;
+---
+
+<svg class={className} style={style} aria-hidden="true" fill="none" stroke="currentColor">
+  <use href={`/icons/sprite.svg#${name}`} />
+</svg>

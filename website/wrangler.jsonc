@@ -1,0 +1,37 @@
+/**
+ * Configuração Cloudflare Wrangler para Astro
+ * Suporta Pages, bindings para D1, KV e R2
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dojoventura-website",
+  "compatibility_date": "2025-03-01",
+  "compatibility_flags": [
+    "nodejs_compat_v2"
+  ],
+  "pages_build_output_dir": "./dist"
+
+  // Bindings opcionais Cloudflare (descomente conforme a necessidade do projeto):
+  
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_name": "client-prod-db",
+  //     "database_id": "xxxx-xxxx-xxxx"
+  //   }
+  // ],
+
+  // "r2_buckets": [
+  //   {
+  //     "binding": "STORAGE",
+  //     "bucket_name": "client-assets-bucket"
+  //   }
+  // ],
+
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "CACHE",
+  //     "id": "xxxx-xxxx-xxxx"
+  //   }
+  // ]
+}

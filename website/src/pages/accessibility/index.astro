@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Declaração de Acessibilidade (WCAG 2.2 AA) | Conformance Report">
+ <section class="py-16 sm:py-24 bg-white ">
+ <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+ <div class="border-b border-line pb-8 mb-10">
+ <div class="inline-flex items-center gap-2 bg-surface-alt px-3 py-1 text-xs font-semibold text-brand-600 mb-4">
+ <span>♿</span> WCAG 2.2 AA & European Accessibility Act (EAA 2025)
+ </div>
+ <h1 class="font-display text-fluid-h1 font-extrabold text-ink uppercase tracking-tight">
+ Declaração de Acessibilidade Digital
+ </h1>
+ <p class="mt-4 text-base text-ink-soft ">
+ Última auditoria técnica: <strong>Setembro de 2026</strong> • Status: <strong>Totalmente Conforme (Fully Conforming)</strong>
+ </p>
+ </div>
+
+ <div class="prose max-w-none space-y-8 text-sm leading-relaxed">
+ <div>
+ <h2 class="font-display text-fluid-h2 font-bold text-ink uppercase ">1. Nosso Compromisso Universal</h2>
+ <p class="mt-2 text-ink-soft ">
+ Acreditamos que a internet deve ser acessível a qualquer pessoa, independentemente de habilidades visuais, auditivas, motoras ou cognitivas. Este portal foi arquitetado sob os princípios de acessibilidade universal desde o primeiro byte, cumprindo rigorosamente as diretrizes <strong>WCAG 2.2 Nível AA</strong>, o <strong>European Accessibility Act (EAA Diretiva 2019/882)</strong>, o <strong>Americans with Disabilities Act (ADA Título II/III)</strong> e a <strong>Lei Brasileira de Inclusão (LBI nº 13.146/2015)</strong>.
+ </p>
+ </div>
+
+ <div>
+ <h2 class="font-display text-fluid-h2 font-bold text-ink uppercase ">2. Medidas Técnicas Implementadas (VPAT / ACR Summary)</h2>
+ <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+ <div class=" border border-line p-4 bg-surface-alt ">
+ <h3 class="font-display text-fluid-h3 font-semibold text-ink uppercase ">Navegação Total por Teclado</h3>
+ <p class="mt-1 text-xs text-ink-muted ">Skip links visíveis (tecla Tab), anéis de foco de alto contraste (3:1+) e armadilhas de foco (focus traps) proibidas.</p>
+ </div>
+ <div class=" border border-line p-4 bg-surface-alt ">
+ <h3 class="font-display text-fluid-h3 font-semibold text-ink uppercase ">Contraste & Tipografia Escalonável</h3>
+ <p class="mt-1 text-xs text-ink-muted ">Relação de contraste mínima de 4.5:1 para texto normal e suporte a zoom de até 200% sem quebra horizontal de layout.</p>
+ </div>
+ <div class=" border border-line p-4 bg-surface-alt ">
+ <h3 class="font-display text-fluid-h3 font-semibold text-ink uppercase ">Target Size de Toque (WCAG 2.2)</h3>
+ <p class="mt-1 text-xs text-ink-muted ">Critério 2.5.8: Todos os elementos interativos touch possuem área mínima de clique de 44x44 pixels ou espaçamento seguro.</p>
+ </div>
+ <div class=" border border-line p-4 bg-surface-alt ">
+ <h3 class="font-display text-fluid-h3 font-semibold text-ink uppercase ">Leitores de Tela & ARIA</h3>
+ <p class="mt-1 text-xs text-ink-muted ">Estrutura de cabeçalhos semântica linear (H1-H6), textos alternativos descritivos e labels em todos os inputs.</p>
+ </div>
+ </div>
+ </div>
+
+ <div>
+ <h2 class="font-display text-fluid-h2 font-bold text-ink uppercase ">3. Metodologia de Avaliação Contínua</h2>
+ <ul class="list-disc pl-5 mt-2 space-y-1 text-ink-soft ">
+ <li><strong>Testes Automatizados:</strong> Auditorias contínuas via <code>axe-core</code> e Google Lighthouse Accessibility (Score 100/100).</li>
+ <li><strong>Auditoria Manual:</strong> Navegação cega com leitores de tela NVDA (Windows) e VoiceOver (macOS / iOS).</li>
+ <li><strong>Navegação sem Mouse:</strong> Testes completos de preenchimento e envio de formulários usando apenas teclado.</li>
+ </ul>
+ </div>
+
+ <div class=" border border-brand-500/20 bg-brand-500/5 p-6">
+ <h2 class="font-display text-fluid-h2 font-bold text-brand-700 uppercase ">4. Canal Direto de Feedback & Suporte de Acessibilidade</h2>
+ <p class="mt-2 text-xs text-ink-soft ">
+ Se você encontrou qualquer barreira de acesso neste site ou necessita de um formato alternativo de documento, entre em contato diretamente com a nossa equipe de engenharia. Respondemos formalmente em até <strong>2 dias úteis</strong>:
+ </p>
+ <div class="mt-4 flex flex-wrap gap-4 text-xs font-semibold">
+ <a href="mailto:acessibilidade@sanbernarda.com" class="text-brand-600 underline">acessibilidade@sanbernarda.com</a>
+ <span class="text-ink-muted">•</span>
+ <span class="text-ink-soft ">WhatsApp / Telefone: +55 (18) 3222-0000</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+</Layout>
