@@ -1,9 +1,8 @@
-name: CI Astro Dojo Ventura (validar; deploy manual)
+name: CI HTML Estático Dojo Ventura (validar; deploy manual)
 
-# GitHub só executa workflows em .github/workflows/ NA RAIZ do repo.
-# O código Astro mora em website/ → tudo roda com working-directory: website.
-# MODO ATUAL: só validação (check + build) a cada push. Deploy DESATIVADO —
-# o step de deploy só roda via disparo manual (Actions → Run workflow).
+# Site estático puro em website/ (HTML + DaisyUI via CDN, sem build).
+# MODO ATUAL: só validação (lint HTML + links internos) a cada push.
+# Deploy DESATIVADO — só roda via disparo manual (Actions → Run workflow → deploy: true).
 on:
   push:
     branches:
@@ -32,13 +31,9 @@ concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
-defaults:
-  run:
-    working-directory: website
-
 jobs:
-  build-and-test:
-    name: Validação & Build
+  validate:
+    name: Lint HTML + Links Internos
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do Repositório
@@ -48,25 +43,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: website/package-lock.json
 
-      - name: Instalar Dependências
-        run: npm ci
+      - name: Lint HTML (htmlhint)
+        run: npx --yes htmlhint "website/**/*.html"
 
-      - name: Checagem de Tipos e Sintaxe Astro
-        run: npx astro check
-
-      - name: Build de Produção
-        run: npm run build
+      - name: Checar links internos e âncoras
+        run: python3 tools/check-links.py website
 
       - name: Deploy no Cloudflare Pages (MANUAL — desativado)
-        # Para ativar o deploy: vá em Actions → CI Astro Dojo Ventura → Run workflow
-        # e marque a opção "deploy". Sem isso, o CI só valida (check + build).
+        # Para ativar o deploy: vá em Actions → CI HTML Estático → Run workflow
+        # e marque a opção "deploy". Sem isso, o CI só valida.
         if: github.event_name == 'workflow_dispatch' && inputs.deploy == true
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: website
-          command: pages deploy ./dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --commit-hash=${{ github.sha }}
+          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --commit-hash=${{ github.sha }}
