@@ -1,7 +1,9 @@
-name: CI/CD Astro Cloudflare Pages
+name: CI Astro Dojo Ventura (validar; deploy manual)
 
 # GitHub só executa workflows em .github/workflows/ NA RAIZ do repo.
 # O código Astro mora em website/ → tudo roda com working-directory: website.
+# MODO ATUAL: só validação (check + build) a cada push. Deploy DESATIVADO —
+# o step de deploy só roda via disparo manual (Actions → Run workflow).
 on:
   push:
     branches:
@@ -16,6 +18,12 @@ on:
     paths:
       - 'website/**'
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Fazer deploy no Cloudflare Pages? (padrão: não)'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -52,8 +60,10 @@ jobs:
       - name: Build de Produção
         run: npm run build
 
-      - name: Deploy no Cloudflare Pages
-        if: github.event_name == 'push'
+      - name: Deploy no Cloudflare Pages (MANUAL — desativado)
+        # Para ativar o deploy: vá em Actions → CI Astro Dojo Ventura → Run workflow
+        # e marque a opção "deploy". Sem isso, o CI só valida (check + build).
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy == true
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
