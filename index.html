@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Lo-Fi Camada 1] Dojo Ventura — Centro de Treinamento de Karatê | Regente Feijó</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description"
+        content="[Lo-Fi] Dojo Ventura: Centro de treinamento de karatê e projeto social em Regente Feijó (SP). Formação cidadã e apoio para atletas competirem pelo Brasil e no mundo.">
+
+    <!-- DaisyUI 4 + Tailwind CSS (Monocromático Lo-Fi Camada 1) -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Regras estritas Camada 1: Monocromático & Acessibilidade */
+        :root {
+            color-scheme: light;
+        }
+
+        .lofi-wireframe {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        .lofi-box {
+            border: 1px dashed rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-base-100 text-base-content antialiased flex flex-col font-sans">
+
+    <!-- Skip Link Acessibilidade WCAG 2.2 AA -->
+    <a href="#conteudo-principal"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 btn btn-sm btn-neutral">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- ============================================================ -->
+    <!-- 1. HEADER & BARRA DE NAVEGAÇÃO                               -->
+    <!-- ============================================================ -->
+    <header class="border-b border-base-300 sticky top-0 z-40 bg-base-100/95 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="navbar px-0 h-16 min-h-16 justify-between">
+                <!-- Logo / Marca -->
+                <div class="navbar-start w-auto gap-3">
+                    <!-- Mobile Drawer Trigger -->
+                    <div class="dropdown lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost btn-square btn-sm" aria-label="Abrir menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 border border-base-300 rounded-box w-64 gap-1">
+                            <li><a href="#causa">[A Causa]</a></li>
+                            <li><a href="#quick-access">[Acesso Rápido]</a></li>
+                            <li><a href="#pilares">[Os 3 Pilares]</a></li>
+                            <li><a href="#atletas">[Atletas & Seleção]</a></li>
+                            <li><a href="#transparencia">[Transparência & Custos]</a></li>
+                            <li><a href="#publicos">[Para Quem É]</a></li>
+                            <li><a href="#aulas">[Aulas & Horários]</a></li>
+                            <li><a href="#faq">[Dúvidas / FAQ]</a></li>
+                            <li><a href="#contato">[Contato]</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="flex items-center gap-3 no-underline">
+                        <div
+                            class="w-9 h-9 border border-base-content bg-base-200 flex items-center justify-center font-bold text-sm tracking-wider">
+                            DV
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-extrabold text-sm tracking-wider uppercase">[DOJO VENTURA]</span>
+                            <span class="text-[10px] text-base-content/60 leading-none">[Karatê & Causa Social • Regente
+                                Feijó/SP]</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="navbar-center hidden lg:flex" aria-label="Navegação Principal">
+                    <ul class="menu menu-horizontal px-1 text-xs uppercase tracking-wider font-semibold gap-1">
+                        <li><a href="#causa" class="hover:bg-base-200">[A Causa]</a></li>
+                        <li><a href="#quick-access" class="hover:bg-base-200">[Acesso Rápido]</a></li>
+                        <li><a href="#pilares" class="hover:bg-base-200">[Pilares]</a></li>
+                        <li><a href="#atletas" class="hover:bg-base-200">[Atletas]</a></li>
+                        <li><a href="#transparencia" class="hover:bg-base-200">[Transparência]</a></li>
+                        <li><a href="#aulas" class="hover:bg-base-200">[Aulas]</a></li>
+                        <li><a href="#faq" class="hover:bg-base-200">[FAQ]</a></li>
+                        <li><a href="#contato" class="hover:bg-base-200">[Contato]</a></li>
+                    </ul>
+                </nav>
+
+                <!-- CTA Header -->
+                <div class="navbar-end w-auto gap-2">
+                    <a href="#apoiar-agora"
+                        class="btn btn-neutral btn-sm rounded-none text-xs uppercase tracking-wider font-bold">
+                        [Quero Apoiar]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- MAIN CONTENT CONTAINER                                       -->
+    <!-- ============================================================ -->
+    <main id="conteudo-principal" class="flex-grow">
+
+        <!-- ========================================================== -->
+        <!-- 2. HERO SECTION (MÍDIA TELA CHEIA + FRASE CENTRAL)         -->
+        <!-- ========================================================== -->
+        <section id="causa"
+            class="hero relative min-h-[100dvh] w-full border-b border-base-300 bg-base-200"
+            aria-label="Banner principal: foto ou vídeo em tela cheia com mensagem central">
+
+            <span
+                class="pointer-events-none absolute left-4 top-4 z-0 text-[10px] font-bold uppercase tracking-wider text-base-content/40 sm:left-6 lg:left-8">
+                [FOTO / VÍDEO HERO — TELA CHEIA]
+            </span>
+
+            <div class="hero-content relative z-10 w-full max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+                <h1
+                    class="inline-block border-2 border-base-content bg-base-100 px-6 py-5 text-2xl font-black uppercase leading-tight tracking-tight sm:px-10 sm:py-6 sm:text-4xl md:text-5xl lg:text-6xl">
+                    KARATÊ QUE FORMA PESSOAS E ATLETAS
+                </h1>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 3. BARRA DE APOIO RÁPIDO & PIX DIRETO                      -->
+        <!-- ========================================================== -->
+        <section id="apoiar-agora" class="bg-base-200 border-b border-base-300 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="border border-base-content/20 bg-base-100 p-5 lg:p-6 flex flex-col lg:flex-row items-center justify-between gap-6">
+
+                    <div class="flex flex-col gap-1 text-center lg:text-left">
+                        <span class="font-extrabold text-sm uppercase tracking-wider">[APOIO DIRETO VIA CHAVE PIX
+                            OFICIAL]</span>
+                        <span class="text-xs text-base-content/70">
+                            [Qualquer valor viabiliza passagens e hospedagem dos atletas para campeonatos fora do
+                            estado]
+                        </span>
+                    </div>
+
+                    <!-- Input Chave PIX (Placeholder Seguro) -->
+                    <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 w-full lg:w-auto">
+                        <div class="join w-full sm:w-auto">
+                            <input type="text" readonly value="[CHAVE-PIX-PENDENTE-CONFIRMAR-RESPONSAVEL]"
+                                class="input input-bordered input-sm join-item font-mono text-xs w-full sm:w-80 bg-base-200"
+                                aria-label="Chave PIX do Dojo Ventura" />
+                            <button type="button"
+                                onclick="navigator.clipboard.writeText('[CHAVE-PIX-PENDENTE-CONFIRMAR-RESPONSAVEL]'); alert('Chave PIX copiada!');"
+                                class="btn btn-neutral btn-sm join-item rounded-none text-xs font-bold uppercase">
+                                [Copiar PIX]
+                            </button>
+                        </div>
+
+                        <a href="#transparencia"
+                            class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase w-full sm:w-auto">
+                            [Ver Vaquinha Online]
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 4. QUICK ACCESS (3 CARDS DE ATALHO - BLUEPRINT AAU)        -->
+        <!-- ========================================================== -->
+        <section id="quick-access" class="py-12 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="mb-8">
+                    <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[NAVEGAÇÃO
+                        RÁPIDA]</span>
+                    <h2 class="text-2xl font-black uppercase tracking-tight">[Atalhos Principais do Dojo]</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Card 1: Atletas -->
+                    <article
+                        class="border border-base-300 bg-base-100 p-6 flex flex-col justify-between hover:border-base-content transition-colors">
+                        <div class="flex flex-col gap-3">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM: EQUIPE COMPETITIVA]
+                            </div>
+                            <span
+                                class="badge badge-ghost rounded-none text-[10px] uppercase font-bold self-start mt-2">[Alto
+                                Desempenho]</span>
+                            <h3 class="text-lg font-black uppercase tracking-tight">[Atletas & Competições]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Conheça os atletas federados, conquistas em torneios estaduais/nacionais e a preparação
+                                rumo à Seleção Brasileira.]
+                            </p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="#atletas"
+                                class="btn btn-outline btn-sm w-full rounded-none text-xs uppercase font-bold">
+                                [Ver Atletas Destaque →]
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Como Apoiar -->
+                    <article
+                        class="border border-base-300 bg-base-100 p-6 flex flex-col justify-between hover:border-base-content transition-colors">
+                        <div class="flex flex-col gap-3">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM: VIAGEM / LOGÍSTICA]
+                            </div>
+                            <span
+                                class="badge badge-ghost rounded-none text-[10px] uppercase font-bold self-start mt-2">[Solidariedade]</span>
+                            <h3 class="text-lg font-black uppercase tracking-tight">[Apoio & Prestação de Contas]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Entenda para onde vai cada doação: passagens, inscrições federativas, hospedagem e
+                                nutrição dos caratecas.]
+                            </p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="#transparencia"
+                                class="btn btn-neutral btn-sm w-full rounded-none text-xs uppercase font-bold">
+                                [Tabela de Custos & PIX →]
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Aulas -->
+                    <article
+                        class="border border-base-300 bg-base-100 p-6 flex flex-col justify-between hover:border-base-content transition-colors">
+                        <div class="flex flex-col gap-3">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM: DOJO / AULAS INFANTIS]
+                            </div>
+                            <span
+                                class="badge badge-ghost rounded-none text-[10px] uppercase font-bold self-start mt-2">[Escola
+                                de Karatê]</span>
+                            <h3 class="text-lg font-black uppercase tracking-tight">[Aulas & Matrículas]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Karatê tradicional para crianças a partir de 5 anos, jovens e adultos. Desenvolvimento
+                                de disciplina, postura e defesa pessoal.]
+                            </p>
+                        </div>
+                        <div class="pt-6">
+                            <a href="#aulas"
+                                class="btn btn-outline btn-sm w-full rounded-none text-xs uppercase font-bold">
+                                [Consultar Horários →]
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 5. OS 3 PILARES DO DOJO VENTURA                            -->
+        <!-- ========================================================== -->
+        <section id="pilares" class="py-12 md:py-16 bg-base-200/60 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="max-w-3xl mb-10">
+                    <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[FILOSOFIA
+                        MARCIAL]</span>
+                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Os 3 Pilares Fundamentais
+                        do Dojo]</h2>
+                    <p class="text-sm text-base-content/70 mt-2">
+                        [Não somos apenas uma academia esportiva: somos um centro formador de caráter, integridade e
+                        oportunidades para Regente Feijó.]
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div class="border border-base-300 bg-base-100 p-6">
+                        <div
+                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
+                            01
+                        </div>
+                        <h3 class="font-black text-base uppercase mb-2">[A Escola & Formação Moral]</h3>
+                        <p class="text-xs text-base-content/70 leading-relaxed">
+                            [O karatê como ferramenta de cidadania. Foco em respeito aos mais velhos, autocontrole
+                            emocional, pontualidade e dedicação escolar obrigatória.]
+                        </p>
+                    </div>
+
+                    <div class="border border-base-300 bg-base-100 p-6">
+                        <div
+                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
+                            02
+                        </div>
+                        <h3 class="font-black text-base uppercase mb-2">[Alto Rendimento & Competições]</h3>
+                        <p class="text-xs text-base-content/70 leading-relaxed">
+                            [Treinamento técnico rigoroso, preparação física periodizada e participação em campeonatos
+                            de nível estadual, brasileiro e internacional.]
+                        </p>
+                    </div>
+
+                    <div class="border border-base-300 bg-base-100 p-6">
+                        <div
+                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
+                            03
+                        </div>
+                        <h3 class="font-black text-base uppercase mb-2">[Ação Social Comunitária]</h3>
+                        <p class="text-xs text-base-content/70 leading-relaxed">
+                            [Portas abertas para jovens de famílias de baixa renda de Regente Feijó e região,
+                            democratizando o acesso ao esporte e aos quimonos.]
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 6. CARDS POR PÚBLICO (4 SEGMENTOS)                         -->
+        <!-- ========================================================== -->
+        <section id="publicos" class="py-12 md:py-16 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[COMUNIDADE
+                        UNIDA]</span>
+                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Como você se conecta ao
+                        Dojo Ventura?]</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Público 1: Pais & Alunos -->
+                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
+                        <div>
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
+                                Alunos & Pais]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Iniciação & Disciplina]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Turmas kids e adultas. Ambiente seguro, tatame oficial e acompanhamento de evolução por
+                                graduação de faixas.]
+                            </p>
+                        </div>
+                        <a href="#aulas" class="mt-4 text-xs font-bold uppercase underline">[Quero Conhecer as
+                            Aulas]</a>
+                    </div>
+
+                    <!-- Público 2: Atletas -->
+                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
+                        <div>
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
+                                Atletas]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Equipe Competitiva]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Treinos específicos de Kata e Kumite para torneios oficiais da federação e seletivas
+                                nacionais.]
+                            </p>
+                        </div>
+                        <a href="#atletas" class="mt-4 text-xs font-bold uppercase underline">[Ver Equipe de
+                            Competição]</a>
+                    </div>
+
+                    <!-- Público 3: Padrinhos / Doadores -->
+                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
+                        <div>
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
+                                Apoiadores PF]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Apadrinhamento Solidário]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Contribua com qualquer valor recorrente ou pontual para pagar taxas de inscrição e
+                                passagens de um atleta.]
+                            </p>
+                        </div>
+                        <a href="#apoiar-agora" class="mt-4 text-xs font-bold uppercase underline">[Fazer Doação
+                            Direta]</a>
+                    </div>
+
+                    <!-- Público 4: Empresas -->
+                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
+                        <div>
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
+                                Empresas]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Patrocínio Institucional]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Associe sua marca à transformação social de jovens e leve sua logomarca aos quimonos em
+                                campeonatos de grande visibilidade.]
+                            </p>
+                        </div>
+                        <a href="#contato" class="mt-4 text-xs font-bold uppercase underline">[Falar com a
+                            Coordenação]</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 7. ATLETAS EM DESTAQUE (CONQUISTAS REAIS)                  -->
+        <!-- ========================================================== -->
+        <section id="atletas" class="py-12 md:py-16 bg-base-200/40 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[QUADRO DE
+                            HONRA]</span>
+                        <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Atletas de Alto
+                            Desempenho]</h2>
+                        <p class="text-sm text-base-content/70 mt-1">
+                            [Guerreiros de Regente Feijó que superam todas as barreiras para levar a bandeira do
+                            interior aos pódios.]
+                        </p>
+                    </div>
+                    <a href="#contato"
+                        class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold self-start md:self-auto">
+                        [Indicar / Apadrinhar um Atleta]
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Card Atleta 1: Convocado Seleção -->
+                    <div class="border border-base-content/30 bg-base-100 p-5 flex flex-col">
+                        <div
+                            class="aspect-square w-full bg-base-200 border border-base-300 flex flex-col items-center justify-center p-4 text-center lofi-box">
+                            <span class="font-bold text-xs uppercase">[FOTO DO ATLETA]</span>
+                            <span class="text-[10px] text-base-content/60 mt-1">[Proporção 1:1 • Oficial]</span>
+                        </div>
+
+                        <div class="mt-4 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="badge badge-neutral rounded-none text-[10px] uppercase font-bold">[Seleção
+                                    Brasileira]</span>
+                                <span class="text-xs font-mono text-base-content/60">[Faixa Preta]</span>
+                            </div>
+
+                            <h3 class="font-black text-lg uppercase">[Ssinesio - Confirmar Nome Completo]</h3>
+                            <span class="text-xs text-base-content/60 mb-3">[Categoria Kumite Sênior / Sub-21]</span>
+
+                            <div class="border-t border-base-300 pt-3 flex flex-col gap-1 text-xs">
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Títulos:]</span>
+                                    <span class="font-semibold text-right">[Medalhas Estaduais / Nacionais]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Próxima Meta:]</span>
+                                    <span class="font-semibold text-right">[Campeonato Brasileiro /
+                                        Pan-Americano]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Status Viagem:]</span>
+                                    <span class="font-bold text-right">[Necessita R$ 2.400 em Apoio]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#apoiar-agora"
+                            class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase mt-5 w-full">
+                            [Apoiar Viagem deste Atleta]
+                        </a>
+                    </div>
+
+                    <!-- Card Atleta 2: Destaque Juvenil -->
+                    <div class="border border-base-300 bg-base-100 p-5 flex flex-col">
+                        <div
+                            class="aspect-square w-full bg-base-200 border border-base-300 flex flex-col items-center justify-center p-4 text-center lofi-box">
+                            <span class="font-bold text-xs uppercase">[FOTO DO ATLETA 2]</span>
+                            <span class="text-[10px] text-base-content/60 mt-1">[Proporção 1:1 • Oficial]</span>
+                        </div>
+
+                        <div class="mt-4 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="badge badge-outline rounded-none text-[10px] uppercase font-bold">[Equipe
+                                    Paulista]</span>
+                                <span class="text-xs font-mono text-base-content/60">[Faixa Marrom]</span>
+                            </div>
+
+                            <h3 class="font-black text-lg uppercase">[Atleta Destaque 2 - Nome a Confirmar]</h3>
+                            <span class="text-xs text-base-content/60 mb-3">[Categoria Juvenil / Cadete]</span>
+
+                            <div class="border-t border-base-300 pt-3 flex flex-col gap-1 text-xs">
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Títulos:]</span>
+                                    <span class="font-semibold text-right">[Campeão Regional Oeste Paulista]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Próxima Meta:]</span>
+                                    <span class="font-semibold text-right">[Final do Paulista em SP]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Status Viagem:]</span>
+                                    <span class="font-bold text-right">[Necessita R$ 850 em Apoio]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#apoiar-agora"
+                            class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase mt-5 w-full">
+                            [Apoiar Viagem deste Atleta]
+                        </a>
+                    </div>
+
+                    <!-- Card Atleta 3: Categoria de Base -->
+                    <div class="border border-base-300 bg-base-100 p-5 flex flex-col">
+                        <div
+                            class="aspect-square w-full bg-base-200 border border-base-300 flex flex-col items-center justify-center p-4 text-center lofi-box">
+                            <span class="font-bold text-xs uppercase">[FOTO DO ATLETA 3]</span>
+                            <span class="text-[10px] text-base-content/60 mt-1">[Proporção 1:1 • Oficial]</span>
+                        </div>
+
+                        <div class="mt-4 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="badge badge-outline rounded-none text-[10px] uppercase font-bold">[Promessa
+                                    Base]</span>
+                                <span class="text-xs font-mono text-base-content/60">[Faixa Roxa/Azul]</span>
+                            </div>
+
+                            <h3 class="font-black text-lg uppercase">[Atleta Destaque 3 - Nome a Confirmar]</h3>
+                            <span class="text-xs text-base-content/60 mb-3">[Categoria Infantil Sub-14]</span>
+
+                            <div class="border-t border-base-300 pt-3 flex flex-col gap-1 text-xs">
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Títulos:]</span>
+                                    <span class="font-semibold text-right">[Medalhista Etapa Regional]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Próxima Meta:]</span>
+                                    <span class="font-semibold text-right">[Torneio Interestadual]</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-base-content/70">[Status Viagem:]</span>
+                                    <span class="font-bold text-right">[Necessita R$ 600 em Apoio]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#apoiar-agora"
+                            class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase mt-5 w-full">
+                            [Apoiar Viagem deste Atleta]
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 8. TRANSPARÊNCIA DE CUSTOS (PARA ONDE VAI O RECURSO)       -->
+        <!-- ========================================================== -->
+        <section id="transparencia" class="py-12 md:py-16 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+                    <div class="lg:col-span-5 flex flex-col gap-4">
+                        <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[GESTÃO ÉTICA &
+                            ABERTA]</span>
+                        <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">[Para onde vai cada centavo
+                            doado?]</h2>
+                        <p class="text-xs sm:text-sm text-base-content/70 leading-relaxed">
+                            [Nossa prioridade máxima é a integridade. Todo recurso recebido por chave PIX, transferência
+                            ou vaquinha online é destinado exclusivamente aos custos operacionais diretos dos atletas em
+                            competições oficiais.]
+                        </p>
+
+                        <div class="border border-base-300 p-4 bg-base-200">
+                            <span class="font-bold text-xs uppercase block mb-1">[Compromisso Público de Prestação de
+                                Contas]</span>
+                            <p class="text-[11px] text-base-content/70">
+                                [Comprovantes de passagens, notas fiscais de alimentação e recibos de taxas federativas
+                                são arquivados e disponibilizados a qualquer apoiador que solicitar via WhatsApp ou
+                                e-mail.]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tabela de Custos Operacionais Reais -->
+                    <div class="lg:col-span-7 border border-base-300 bg-base-100 p-6">
+                        <h3 class="font-black text-sm uppercase tracking-wider mb-4">[Composição Média de Custo por
+                            Torneio Nacional]</h3>
+
+                        <div class="overflow-x-auto">
+                            <table class="table table-sm w-full text-xs">
+                                <thead>
+                                    <tr class="border-b border-base-300 font-bold uppercase text-base-content">
+                                        <th>[Item de Despesa]</th>
+                                        <th>[Descrição Operacional]</th>
+                                        <th class="text-right">[Estimativa Média]</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-base-200">
+                                    <tr>
+                                        <td class="font-semibold">[Passagens & Deslocamento]</td>
+                                        <td class="text-base-content/70">[Ônibus interestadual / Aéreo saindo de
+                                            Presidente Prudente]</td>
+                                        <td class="text-right font-mono">[R$ 900 - R$ 1.600]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">[Hospedagem Simples]</td>
+                                        <td class="text-base-content/70">[Hotel ou alojamento próximo ao ginásio oficial
+                                            (2 a 3 diárias)]</td>
+                                        <td class="text-right font-mono">[R$ 350 - R$ 600]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">[Taxa de Inscrição Federativa]</td>
+                                        <td class="text-base-content/70">[Filiação, pesagem e inscrição por categoria
+                                            (Kata/Kumite)]</td>
+                                        <td class="text-right font-mono">[R$ 150 - R$ 280]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">[Alimentação & Hidratação]</td>
+                                        <td class="text-base-content/70">[Refeições equilibradas para atletas em dias de
+                                            disputa]</td>
+                                        <td class="text-right font-mono">[R$ 180 - R$ 300]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Progresso Geral da Meta Atual -->
+                        <div class="mt-6 pt-4 border-t border-base-300 flex flex-col gap-2">
+                            <div class="flex justify-between text-xs font-bold uppercase">
+                                <span>[Meta de Arrecadação Próxima Viagem]</span>
+                                <span class="font-mono">[R$ 1.850 / R$ 4.500 (41%)]</span>
+                            </div>
+                            <progress class="progress progress-neutral w-full h-3 rounded-none" value="41"
+                                max="100"></progress>
+                            <span class="text-[10px] text-base-content/60 text-right">[Atualizado semanalmente pela
+                                administração do dojo]</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 9. AULAS & HORÁRIOS DA ESCOLA                              -->
+        <!-- ========================================================== -->
+        <section id="aulas" class="py-12 md:py-16 bg-base-200/50 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="max-w-2xl mb-10">
+                    <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[FORMAÇÃO
+                        CONTÍNUA]</span>
+                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Aulas & Horários de
+                        Treino]</h2>
+                    <p class="text-xs sm:text-sm text-base-content/70 mt-1">
+                        [Grade horária dividida por faixas etárias e níveis de graduação. Turmas abertas para iniciantes
+                        durante o ano todo.]
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div class="border border-base-300 bg-base-100 p-5">
+                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Kids • 5 a
+                            11 anos]</span>
+                        <h3 class="font-black text-base uppercase mb-1">[Karatê Infantil]</h3>
+                        <p class="text-xs text-base-content/70 mb-4">[Coordenação motora, respeito, foco e brincadeiras
+                            pedagógicas marciais.]</p>
+                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
+                            <div>[Segunda e Quarta:] 18:00 às 19:00</div>
+                            <div>[Sábado:] 09:00 às 10:00</div>
+                        </div>
+                    </div>
+
+                    <div class="border border-base-300 bg-base-100 p-5">
+                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Jovens &
+                            Adultos • 12+ anos]</span>
+                        <h3 class="font-black text-base uppercase mb-1">[Karatê Tradicional]</h3>
+                        <p class="text-xs text-base-content/70 mb-4">[Condicionamento físico, técnica apurada de Kihon,
+                            Kata e defesa pessoal.]</p>
+                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
+                            <div>[Terça e Quinta:] 19:30 às 20:45</div>
+                            <div>[Sexta (Treino Livre):] 19:00 às 20:30</div>
+                        </div>
+                    </div>
+
+                    <div class="border border-base-300 bg-base-100 p-5">
+                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Equipe de
+                            Alto Rendimento]</span>
+                        <h3 class="font-black text-base uppercase mb-1">[Treino Competitivo]</h3>
+                        <p class="text-xs text-base-content/70 mb-4">[Intensivo de Kumite de luta e Kata competitivo com
+                            foco em torneios federados.]</p>
+                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
+                            <div>[Segunda a Quinta:] 20:45 às 22:00</div>
+                            <div>[Sábado (Simulado):] 10:00 às 12:00</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="#contato" class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase">
+                        [Agendar Aula Experimental Gratuita →]
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 10. NOTÍCIAS & HIGHLIGHTS                                  -->
+        <!-- ========================================================== -->
+        <section id="noticias" class="py-12 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="flex items-center justify-between mb-8">
+                    <div>
+                        <span
+                            class="text-xs font-bold tracking-widest uppercase text-base-content/60">[ATUALIZAÇÕES]</span>
+                        <h2 class="text-2xl font-black uppercase tracking-tight mt-1">[Novidades do Tatame]</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <article class="border border-base-300 bg-base-100 p-5 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-mono text-base-content/60 block mb-1">[05 de Setembro de
+                                2026]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Convocação de atleta do Dojo Ventura para a
+                                Seleção]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Resultado das seletivas nacionais garante vaga para atleta representar o estado na
+                                competição nacional.]
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-base-200">
+                            <span class="text-xs font-bold uppercase">[Ler comunicado oficial →]</span>
+                        </div>
+                    </article>
+
+                    <article class="border border-base-300 bg-base-100 p-5 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-mono text-base-content/60 block mb-1">[22 de Agosto de
+                                2026]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Campanha de arrecadação para o Campeonato
+                                Brasileiro]</h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Abertura da vaquinha e divulgação da chave PIX para cobrir as passagens de 4 atletas de
+                                Regente Feijó.]
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-base-200">
+                            <span class="text-xs font-bold uppercase">[Ver detalhes da vaquinha →]</span>
+                        </div>
+                    </article>
+
+                    <article class="border border-base-300 bg-base-100 p-5 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-mono text-base-content/60 block mb-1">[10 de Agosto de
+                                2026]</span>
+                            <h3 class="font-bold text-sm uppercase mb-2">[Exame de Faixas e Graduação dos Jovens Alunos]
+                            </h3>
+                            <p class="text-xs text-base-content/70 leading-relaxed">
+                                [Mais de 25 alunos foram promovidos em cerimônia que reuniu familiares e a comunidade no
+                                dojo.]
+                            </p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-base-200">
+                            <span class="text-xs font-bold uppercase">[Ver fotos da cerimônia →]</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 11. FAQ: PERGUNTAS FREQUENTES (ACORDEÕES NATIVOS)          -->
+        <!-- ========================================================== -->
+        <section id="faq" class="py-12 md:py-16 bg-base-200/50 border-b border-base-300">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-10">
+                    <span
+                        class="text-xs font-bold tracking-widest uppercase text-base-content/60">[ESCLARECIMENTOS]</span>
+                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Perguntas Frequentes]
+                    </h2>
+                </div>
+
+                <div class="flex flex-col gap-3">
+
+                    <details class="collapse collapse-plus border border-base-300 bg-base-100 rounded-none">
+                        <summary class="collapse-title font-bold text-sm uppercase">
+                            [Posso fazer uma doação de qualquer valor via PIX?]
+                        </summary>
+                        <div class="collapse-content text-xs text-base-content/70 leading-relaxed">
+                            [Sim! Qualquer quantia (R$ 10, R$ 20, R$ 50 ou mais) ajuda diretamente na compra de
+                            passagens, alimentação ou inscrições dos caratecas. Toda contribuição faz diferença
+                            concreta.]
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-plus border border-base-300 bg-base-100 rounded-none">
+                        <summary class="collapse-title font-bold text-sm uppercase">
+                            [Como posso ter certeza de que o recurso é usado corretamente?]
+                        </summary>
+                        <div class="collapse-content text-xs text-base-content/70 leading-relaxed">
+                            [Temos política estrita de transparência aberta. Publicamos a prestação de contas dos
+                            campeonatos e enviamos comprovantes aos apoiadores e empresas parceiras.]
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-plus border border-base-300 bg-base-100 rounded-none">
+                        <summary class="collapse-title font-bold text-sm uppercase">
+                            [Como empresas podem patrocinar e colocar a marca no quimono?]
+                        </summary>
+                        <div class="collapse-content text-xs text-base-content/70 leading-relaxed">
+                            [Empresas podem apoiar com cotas de patrocínio para a temporada. Disponibilizamos espaço
+                            para aplicação de patch no quimono oficial, menção em redes e banners de agradecimento.]
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-plus border border-base-300 bg-base-100 rounded-none">
+                        <summary class="collapse-title font-bold text-sm uppercase">
+                            [Como funcionam as aulas e quem pode se matricular?]
+                        </summary>
+                        <div class="collapse-content text-xs text-base-content/70 leading-relaxed">
+                            [Atendemos crianças a partir dos 5 anos, jovens e adultos, homens e mulheres. Oferecemos uma
+                            aula experimental gratuita para você conhecer a metodologia antes de efetivar a matrícula.]
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-plus border border-base-300 bg-base-100 rounded-none">
+                        <summary class="collapse-title font-bold text-sm uppercase">
+                            [Onde fica localizado o Dojo Ventura em Regente Feijó?]
+                        </summary>
+                        <div class="collapse-content text-xs text-base-content/70 leading-relaxed">
+                            [Nosso Centro de Treinamento está sediado em Regente Feijó - SP. O endereço exato e ponto de
+                            referência podem ser consultados na seção de contato abaixo.]
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 12. CONTATO & LOCALIZAÇÃO (COM FORMULÁRIO DE APOIO)        -->
+        <!-- ========================================================== -->
+        <section id="contato" class="py-12 md:py-16 border-b border-base-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+                    <!-- Informações de Contato -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        <div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[FALE COM O
+                                DOJO]</span>
+                            <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Canais Oficiais
+                                de Contato]</h2>
+                            <p class="text-xs sm:text-sm text-base-content/70 mt-2">
+                                [Tire dúvidas sobre matrículas, faça sua proposta de patrocínio empresarial ou confirme
+                                sua contribuição para os atletas.]
+                            </p>
+                        </div>
+
+                        <div class="border border-base-300 p-5 bg-base-100 flex flex-col gap-3 text-xs">
+                            <div>
+                                <span class="font-bold uppercase text-base-content block">[Endereço do Centro de
+                                    Treinamento:]</span>
+                                <span class="text-base-content/70">[Endereço Oficial PENDENTE de Confirmação • Regente
+                                    Feijó - SP]</span>
+                            </div>
+                            <div class="border-t border-base-200 pt-2">
+                                <span class="font-bold uppercase text-base-content block">[WhatsApp Oficial:]</span>
+                                <span class="text-base-content/70">[Número PENDENTE de Confirmação do Sensei]</span>
+                            </div>
+                            <div class="border-t border-base-200 pt-2">
+                                <span class="font-bold uppercase text-base-content block">[E-mail Institucional:]</span>
+                                <span class="text-base-content/70">[contato@dojoventura.com.br — PENDENTE]</span>
+                            </div>
+                            <div class="border-t border-base-200 pt-2">
+                                <span class="font-bold uppercase text-base-content block">[Sensei / Responsável:]</span>
+                                <span class="text-base-content/70">[Nome do Sensei Responsável PENDENTE]</span>
+                            </div>
+                        </div>
+
+                        <!-- Box de Mapa / Localização Placeholder -->
+                        <div
+                            class="aspect-video w-full bg-base-200 border border-base-300 flex flex-col items-center justify-center p-4 text-center lofi-box">
+                            <span class="font-bold text-xs uppercase">[MAPA DE LOCALIZAÇÃO]</span>
+                            <span class="text-[10px] text-base-content/60 mt-1">[Regente Feijó / Oeste Paulista •
+                                Integrar Google Maps na Camada 4]</span>
+                        </div>
+                    </div>
+
+                    <!-- Formulário Estrutural (Camada 1) -->
+                    <div class="lg:col-span-7 border border-base-300 bg-base-100 p-6 sm:p-8">
+                        <h3 class="font-black text-lg uppercase tracking-tight mb-2">[Formulário de Mensagem &
+                            Apadrinhamento]</h3>
+                        <p class="text-xs text-base-content/70 mb-6">
+                            [Envie seus dados para entrar em contato com a equipe do dojo. Resposta rápida via WhatsApp
+                            ou e-mail.]
+                        </p>
+
+                        <form
+                            onsubmit="event.preventDefault(); alert('[Camada 1 Lo-Fi: Formulário estrutural pronto. Conexão de API Cloudflare Pages Function será ativada na Camada 5]');"
+                            class="flex flex-col gap-4">
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="form-control">
+                                    <label class="label pb-1">
+                                        <span class="label-text text-xs font-bold uppercase">[Seu Nome Completo
+                                            *]</span>
+                                    </label>
+                                    <input type="text" required placeholder="[Digite seu nome]"
+                                        class="input input-bordered input-sm rounded-none text-xs w-full" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="label pb-1">
+                                        <span class="label-text text-xs font-bold uppercase">[WhatsApp com DDD *]</span>
+                                    </label>
+                                    <input type="tel" required placeholder="[(18) 9XXXX-XXXX]"
+                                        class="input input-bordered input-sm rounded-none text-xs w-full" />
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="form-control">
+                                    <label class="label pb-1">
+                                        <span class="label-text text-xs font-bold uppercase">[E-mail de Contato]</span>
+                                    </label>
+                                    <input type="email" placeholder="[seuemail@exemplo.com]"
+                                        class="input input-bordered input-sm rounded-none text-xs w-full" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="label pb-1">
+                                        <span class="label-text text-xs font-bold uppercase">[Assunto Principal
+                                            *]</span>
+                                    </label>
+                                    <select class="select select-bordered select-sm rounded-none text-xs w-full"
+                                        required>
+                                        <option value="" disabled selected>[Selecione o assunto]</option>
+                                        <option value="apoiar">[Quero ser apoiador / doar para os atletas]</option>
+                                        <option value="empresa">[Patrocínio empresarial / Parceria]</option>
+                                        <option value="aulas">[Matrículas e aulas para crianças / adultos]</option>
+                                        <option value="outro">[Outro assunto]</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label pb-1">
+                                    <span class="label-text text-xs font-bold uppercase">[Sua Mensagem *]</span>
+                                </label>
+                                <textarea rows="4" required
+                                    placeholder="[Escreva sua mensagem ou detalhes sobre como deseja apoiar o dojo]"
+                                    class="textarea textarea-bordered rounded-none text-xs w-full"></textarea>
+                            </div>
+
+                            <!-- Termos & Cloudflare Turnstile Placeholder -->
+                            <div
+                                class="p-3 bg-base-200 border border-base-300 text-[11px] text-base-content/70 flex items-center justify-between">
+                                <span>[Proteção anti-bot Cloudflare Turnstile integrada]</span>
+                                <span class="badge badge-ghost rounded-none text-[10px] uppercase font-mono">[Turnstile
+                                    OK]</span>
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-neutral rounded-none text-xs font-bold uppercase tracking-wider h-12 w-full mt-2">
+                                [Enviar Mensagem para a Coordenação]
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- 13. FOOTER (RODAPÉ 3 COLUNAS)                                -->
+    <!-- ============================================================ -->
+    <footer class="bg-base-200 text-base-content border-t border-base-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+                <!-- Coluna 1: Marca & Propósito -->
+                <div class="md:col-span-2 flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 border border-base-content bg-base-100 flex items-center justify-center font-bold text-xs">
+                            DV
+                        </div>
+                        <span class="font-extrabold text-sm uppercase tracking-wider">[DOJO VENTURA • KARATÊ
+                            TRADICIONAL]</span>
+                    </div>
+                    <p class="text-xs text-base-content/70 max-w-md leading-relaxed">
+                        [Centro de treinamento esportivo e formativo em Regente Feijó (SP). Disciplina, formação humana
+                        e preparação de atletas de alto rendimento para o Brasil e o mundo.]
+                    </p>
+                    <div class="text-[11px] text-base-content/60 mt-1">
+                        [CNPJ / Registro: Em fase de confirmação cadastral]
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Navegação Rápida -->
+                <div class="flex flex-col gap-2">
+                    <span class="font-bold text-xs uppercase tracking-wider mb-1">[Navegação]</span>
+                    <ul class="flex flex-col gap-1 text-xs text-base-content/70">
+                        <li><a href="#causa" class="hover:underline">[A Causa dos Atletas]</a></li>
+                        <li><a href="#atletas" class="hover:underline">[Quadro de Atletas]</a></li>
+                        <li><a href="#transparencia" class="hover:underline">[Transparência & Custos]</a></li>
+                        <li><a href="#aulas" class="hover:underline">[Horários das Aulas]</a></li>
+                        <li><a href="#faq" class="hover:underline">[Perguntas Frequentes]</a></li>
+                        <li><a href="#contato" class="hover:underline">[Canais de Contato]</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Apoio & Comunidade -->
+                <div class="flex flex-col gap-2">
+                    <span class="font-bold text-xs uppercase tracking-wider mb-1">[Como Ajudar]</span>
+                    <ul class="flex flex-col gap-1 text-xs text-base-content/70">
+                        <li><a href="#apoiar-agora" class="hover:underline">[Chave PIX Oficial]</a></li>
+                        <li><a href="#transparencia" class="hover:underline">[Vaquinha Online]</a></li>
+                        <li><a href="#contato" class="hover:underline">[Patrocínio de Empresas]</a></li>
+                        <li><a href="#contato" class="hover:underline">[Doação de Quimonos e Materiais]</a></li>
+                    </ul>
+
+                    <div class="mt-4 pt-3 border-t border-base-300">
+                        <span class="text-[10px] uppercase font-bold text-base-content/60 block mb-1">[Cidade
+                            Base:]</span>
+                        <span class="text-xs text-base-content/80">[Regente Feijó • Oeste Paulista]</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rodapé Inferior / Direitos -->
+            <div
+                class="border-t border-base-300 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-base-content/60">
+                <div>
+                    [© 2026 Dojo Ventura. Todos os direitos reservados. Projeto sem fins lucrativos de incentivo ao
+                    esporte.]
+                </div>
+                <div class="flex items-center gap-4 text-[11px]">
+                    <a href="#" class="hover:underline">[Termos de Uso]</a>
+                    <a href="#" class="hover:underline">[Privacidade LGPD]</a>
+                    <span class="text-base-content/40">•</span>
+                    <sanbernarda-badge data-source="dojoventura"></sanbernarda-badge>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- SanBernarda Universal Attribution Widget -->
+    <script src="https://sanbernarda.com/widgets/sanbernarda-badge.js" async defer></script>
+</body>
+
+</html>
