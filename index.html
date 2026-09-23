@@ -87,8 +87,8 @@
                             <li><a href="#pilares">[Os 3 Pilares]</a></li>
                             <li><a href="#atletas">[Atletas & Seleção]</a></li>
                             <li><a href="#transparencia">[Transparência & Custos]</a></li>
-                            <li><a href="#publicos">[Para Quem É]</a></li>
-                            <li><a href="#aulas">[Aulas & Horários]</a></li>
+                            <li><a href="#conexao">[Para Quem É]</a></li>
+                            <li><a href="#pilares">[Aulas & Horários]</a></li>
                             <li><a href="#faq">[Dúvidas / FAQ]</a></li>
                             <li><a href="#contato">[Contato]</a></li>
                         </ul>
@@ -115,7 +115,7 @@
                         <li><a href="#pilares" class="hover:bg-base-200">[Pilares]</a></li>
                         <li><a href="#atletas" class="hover:bg-base-200">[Atletas]</a></li>
                         <li><a href="#transparencia" class="hover:bg-base-200">[Transparência]</a></li>
-                        <li><a href="#aulas" class="hover:bg-base-200">[Aulas]</a></li>
+                        <li><a href="#pilares" class="hover:bg-base-200">[Aulas]</a></li>
                         <li><a href="#faq" class="hover:bg-base-200">[FAQ]</a></li>
                         <li><a href="#contato" class="hover:bg-base-200">[Contato]</a></li>
                     </ul>
@@ -212,7 +212,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
                     <!-- Atalho 1: Aula Experimental / Horários -->
-                    <a href="#aulas"
+                    <a href="#pilares"
                         class="border border-base-300 bg-base-100 p-6 flex flex-col gap-3 hover:border-base-content hover:bg-base-200/40 transition-colors">
                         <span class="text-sm font-black uppercase tracking-tight">[Aula Experimental]</span>
                         <span class="text-xs text-base-content/60 uppercase font-medium">Horários</span>
@@ -260,62 +260,74 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <!-- Pilar 1: Disciplina / Karatê Infantil -->
+                    <!-- Card 1: Karatê Infantil -->
                     <div class="card border border-base-300 bg-base-100 rounded-none">
                         <div class="card-body gap-4">
                             <div
                                 class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
-                                [IMAGEM]
+                                [IMAGEM / ÍCONE]
                             </div>
-                            <h3 class="card-title text-base font-black uppercase justify-center">[Disciplina / Karatê
-                                Infantil]</h3>
-                            <p class="text-xs text-base-content/60 text-center uppercase">
-                                [objetivo • faixa etária • horários]
+                            <div class="flex justify-between items-center gap-2">
+                                <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Kids • 5
+                                    a 11 anos]</span>
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase">[Karatê Infantil]</h3>
+                            <p class="text-xs text-base-content/60 leading-relaxed">
+                                [Coordenação motora, respeito, foco e brincadeiras pedagógicas marciais.]
                             </p>
-                            <div class="card-actions justify-center mt-2">
-                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                            <div class="card-actions mt-auto pt-2">
+                                <button onclick="modal_kids.showModal()"
+                                    class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold w-full">
                                     [Ver Detalhes]
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pilar 2: Comunidade / Jovens & Adultos -->
+                    <!-- Card 2: Karatê Tradicional -->
                     <div class="card border border-base-300 bg-base-100 rounded-none">
                         <div class="card-body gap-4">
                             <div
                                 class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
-                                [IMAGEM]
+                                [IMAGEM / ÍCONE]
                             </div>
-                            <h3 class="card-title text-base font-black uppercase justify-center">[Comunidade / Jovens &
-                                Adultos]</h3>
-                            <p class="text-xs text-base-content/60 text-center uppercase">
-                                [objetivo • faixa etária • horários]
+                            <div class="flex justify-between items-center gap-2">
+                                <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Jovens &
+                                    Adultos • 12+ anos]</span>
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase">[Karatê Tradicional]</h3>
+                            <p class="text-xs text-base-content/60 leading-relaxed">
+                                [Condicionamento físico, técnica apurada de Kihon, Kata e defesa pessoal.]
                             </p>
-                            <div class="card-actions justify-center mt-2">
-                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                            <div class="card-actions mt-auto pt-2">
+                                <button onclick="modal_adultos.showModal()"
+                                    class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold w-full">
                                     [Ver Detalhes]
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Pilar 3: Competição / Alto Rendimento -->
+                    <!-- Card 3: Treino Competitivo -->
                     <div class="card border border-base-300 bg-base-100 rounded-none">
                         <div class="card-body gap-4">
                             <div
                                 class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
-                                [IMAGEM]
+                                [IMAGEM / ÍCONE]
                             </div>
-                            <h3 class="card-title text-base font-black uppercase justify-center">[Competição / Alto
-                                Rendimento]</h3>
-                            <p class="text-xs text-base-content/60 text-center uppercase">
-                                [objetivo • faixa etária • horários]
+                            <div class="flex justify-between items-center gap-2">
+                                <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Equipe de
+                                    Alto Rendimento]</span>
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase">[Treino Competitivo]</h3>
+                            <p class="text-xs text-base-content/60 leading-relaxed">
+                                [Intensivo de Kumite de luta e Kata competitivo com foco em torneios federados.]
                             </p>
-                            <div class="card-actions justify-center mt-2">
-                                <a href="#atletas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                            <div class="card-actions mt-auto pt-2">
+                                <button onclick="modal_competitivo.showModal()"
+                                    class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold w-full">
                                     [Ver Detalhes]
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -324,6 +336,134 @@
 
             </div>
         </section>
+
+        <!-- ========================================================== -->
+        <!-- MODAL 1: KARATÊ INFANTIL • HORÁRIOS                         -->
+        <!-- ========================================================== -->
+        <dialog id="modal_kids" class="modal">
+            <div class="modal-box rounded-none border border-base-300 bg-base-100">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button>
+                </form>
+                <h3 class="text-lg font-black uppercase">[Karatê Infantil • Horários]</h3>
+                <div class="mt-2">
+                    <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Kids • 5 a 11
+                        anos]</span>
+                </div>
+                <p class="text-xs text-base-content/70 leading-relaxed mt-4">
+                    [Coordenação motora, respeito, foco e brincadeiras pedagógicas marciais. Turmas abertas para
+                    iniciantes durante o ano todo.]
+                </p>
+                <div class="text-xs border border-base-300 bg-base-200/40 mt-5 p-4 flex flex-col gap-2 font-mono">
+                    <div class="flex justify-between gap-4">
+                        <span>[Segunda e Quarta:]</span>
+                        <span>18:00 às 19:00</span>
+                    </div>
+                    <div class="flex justify-between gap-4">
+                        <span>[Sábado:]</span>
+                        <span>09:00 às 10:00</span>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <a href="#contato" class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase">
+                        [Agendar Aula Experimental]
+                    </a>
+                    <form method="dialog">
+                        <button class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase">
+                            [Fechar]
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
+
+        <!-- ========================================================== -->
+        <!-- MODAL 2: KARATÊ TRADICIONAL • HORÁRIOS                     -->
+        <!-- ========================================================== -->
+        <dialog id="modal_adultos" class="modal">
+            <div class="modal-box rounded-none border border-base-300 bg-base-100">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button>
+                </form>
+                <h3 class="text-lg font-black uppercase">[Karatê Tradicional • Horários]</h3>
+                <div class="mt-2">
+                    <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Jovens & Adultos •
+                        12+ anos]</span>
+                </div>
+                <p class="text-xs text-base-content/70 leading-relaxed mt-4">
+                    [Condicionamento físico, técnica apurada de Kihon, Kata e defesa pessoal. Turmas abertas para
+                    iniciantes durante o ano todo.]
+                </p>
+                <div class="text-xs border border-base-300 bg-base-200/40 mt-5 p-4 flex flex-col gap-2 font-mono">
+                    <div class="flex justify-between gap-4">
+                        <span>[Terça e Quinta:]</span>
+                        <span>19:30 às 20:45</span>
+                    </div>
+                    <div class="flex justify-between gap-4">
+                        <span>[Sexta (Treino Livre):]</span>
+                        <span>19:00 às 20:30</span>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <a href="#contato" class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase">
+                        [Agendar Aula Experimental]
+                    </a>
+                    <form method="dialog">
+                        <button class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase">
+                            [Fechar]
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
+
+        <!-- ========================================================== -->
+        <!-- MODAL 3: TREINO COMPETITIVO • HORÁRIOS                     -->
+        <!-- ========================================================== -->
+        <dialog id="modal_competitivo" class="modal">
+            <div class="modal-box rounded-none border border-base-300 bg-base-100">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button>
+                </form>
+                <h3 class="text-lg font-black uppercase">[Treino Competitivo • Horários]</h3>
+                <div class="mt-2">
+                    <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase">[Equipe de Alto
+                        Rendimento]</span>
+                </div>
+                <p class="text-xs text-base-content/70 leading-relaxed mt-4">
+                    [Intensivo de Kumite de luta e Kata competitivo com foco em torneios federados.]
+                </p>
+                <div class="text-xs border border-base-300 bg-base-200/40 mt-5 p-4 flex flex-col gap-2 font-mono">
+                    <div class="flex justify-between gap-4">
+                        <span>[Segunda a Quinta:]</span>
+                        <span>20:45 às 22:00</span>
+                    </div>
+                    <div class="flex justify-between gap-4">
+                        <span>[Sábado (Simulado):]</span>
+                        <span>10:00 às 12:00</span>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <a href="#atletas" class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase">
+                        [Quero Ser Atleta / Conhecer Seleção]
+                    </a>
+                    <form method="dialog">
+                        <button class="btn btn-outline btn-sm rounded-none text-xs font-bold uppercase">
+                            [Fechar]
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
 
         <!-- ========================================================== -->
         <!-- 6. CARDS POR PÚBLICO (4 SEGMENTOS)                         -->
@@ -354,7 +494,8 @@
                                 [Agende uma aula experimental e conheça nossos horários e turmas para todas as idades.]
                             </p>
                             <div class="card-actions justify-start mt-auto">
-                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                <a href="#pilares"
+                                    class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
                                     [Agendar Aula Experimental]
                                 </a>
                             </div>
@@ -646,69 +787,6 @@
         <!-- ========================================================== -->
         <!-- 9. AULAS & HORÁRIOS DA ESCOLA                              -->
         <!-- ========================================================== -->
-        <section id="aulas" class="py-12 md:py-16 bg-base-200/50">
-            <div class="w-full px-4 sm:px-6 lg:px-8">
-
-                <div class="max-w-2xl mb-10">
-                    <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[FORMAÇÃO
-                        CONTÍNUA]</span>
-                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Aulas & Horários de
-                        Treino]</h2>
-                    <p class="text-xs sm:text-sm text-base-content/70 mt-1">
-                        [Grade horária dividida por faixas etárias e níveis de graduação. Turmas abertas para iniciantes
-                        durante o ano todo.]
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <div class="border border-base-300 bg-base-100 p-5">
-                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Kids • 5 a
-                            11 anos]</span>
-                        <h3 class="font-black text-base uppercase mb-1">[Karatê Infantil]</h3>
-                        <p class="text-xs text-base-content/70 mb-4">[Coordenação motora, respeito, foco e brincadeiras
-                            pedagógicas marciais.]</p>
-                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
-                            <div>[Segunda e Quarta:] 18:00 às 19:00</div>
-                            <div>[Sábado:] 09:00 às 10:00</div>
-                        </div>
-                    </div>
-
-                    <div class="border border-base-300 bg-base-100 p-5">
-                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Jovens &
-                            Adultos • 12+ anos]</span>
-                        <h3 class="font-black text-base uppercase mb-1">[Karatê Tradicional]</h3>
-                        <p class="text-xs text-base-content/70 mb-4">[Condicionamento físico, técnica apurada de Kihon,
-                            Kata e defesa pessoal.]</p>
-                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
-                            <div>[Terça e Quinta:] 19:30 às 20:45</div>
-                            <div>[Sexta (Treino Livre):] 19:00 às 20:30</div>
-                        </div>
-                    </div>
-
-                    <div class="border border-base-300 bg-base-100 p-5">
-                        <span class="badge badge-neutral rounded-none text-[10px] font-bold uppercase mb-2">[Equipe de
-                            Alto Rendimento]</span>
-                        <h3 class="font-black text-base uppercase mb-1">[Treino Competitivo]</h3>
-                        <p class="text-xs text-base-content/70 mb-4">[Intensivo de Kumite de luta e Kata competitivo com
-                            foco em torneios federados.]</p>
-                        <div class="text-xs border-t border-base-200 pt-3 flex flex-col gap-1 font-mono">
-                            <div>[Segunda a Quinta:] 20:45 às 22:00</div>
-                            <div>[Sábado (Simulado):] 10:00 às 12:00</div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="mt-8 text-center">
-                    <a href="#contato" class="btn btn-neutral btn-sm rounded-none text-xs font-bold uppercase">
-                        [Agendar Aula Experimental Gratuita →]
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
         <!-- ========================================================== -->
         <!-- 10. NOTÍCIAS & HIGHLIGHTS                                  -->
         <!-- ========================================================== -->
@@ -1023,7 +1101,7 @@
                         <li><a href="#causa" class="hover:underline">[A Causa dos Atletas]</a></li>
                         <li><a href="#atletas" class="hover:underline">[Quadro de Atletas]</a></li>
                         <li><a href="#transparencia" class="hover:underline">[Transparência & Custos]</a></li>
-                        <li><a href="#aulas" class="hover:underline">[Horários das Aulas]</a></li>
+                        <li><a href="#pilares" class="hover:underline">[Horários das Aulas]</a></li>
                         <li><a href="#faq" class="hover:underline">[Perguntas Frequentes]</a></li>
                         <li><a href="#contato" class="hover:underline">[Canais de Contato]</a></li>
                     </ul>
