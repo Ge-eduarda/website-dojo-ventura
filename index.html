@@ -29,6 +29,21 @@
             color-scheme: light;
         }
 
+        html,
+        body {
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        html {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         .lofi-wireframe {
             background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 0);
             background-size: 16px 16px;
@@ -234,53 +249,75 @@
         <section id="pilares" class="py-12 md:py-16 bg-base-200/60">
             <div class="w-full px-4 sm:px-6 lg:px-8">
 
-                <div class="max-w-3xl mb-10">
+                <div class="mb-10">
                     <span class="text-xs font-bold tracking-widest uppercase text-base-content/60">[FILOSOFIA
                         MARCIAL]</span>
-                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Os 3 Pilares Fundamentais
-                        do Dojo]</h2>
+                    <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[ESCOLHA SEU CAMINHO]</h2>
                     <p class="text-sm text-base-content/70 mt-2">
-                        [Não somos apenas uma academia esportiva: somos um centro formador de caráter, integridade e
-                        oportunidades para Regente Feijó.]
+                        [Disciplina, comunidade e alto rendimento: encontre a trilha ideal dentro do Dojo Ventura.]
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <div class="border border-base-300 bg-base-100 p-6">
-                        <div
-                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
-                            01
+                    <!-- Pilar 1: Disciplina / Karatê Infantil -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM]
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase justify-center">[Disciplina / Karatê
+                                Infantil]</h3>
+                            <p class="text-xs text-base-content/60 text-center uppercase">
+                                [objetivo • faixa etária • horários]
+                            </p>
+                            <div class="card-actions justify-center mt-2">
+                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Ver Detalhes]
+                                </a>
+                            </div>
                         </div>
-                        <h3 class="font-black text-base uppercase mb-2">[A Escola & Formação Moral]</h3>
-                        <p class="text-xs text-base-content/70 leading-relaxed">
-                            [O karatê como ferramenta de cidadania. Foco em respeito aos mais velhos, autocontrole
-                            emocional, pontualidade e dedicação escolar obrigatória.]
-                        </p>
                     </div>
 
-                    <div class="border border-base-300 bg-base-100 p-6">
-                        <div
-                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
-                            02
+                    <!-- Pilar 2: Comunidade / Jovens & Adultos -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM]
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase justify-center">[Comunidade / Jovens &
+                                Adultos]</h3>
+                            <p class="text-xs text-base-content/60 text-center uppercase">
+                                [objetivo • faixa etária • horários]
+                            </p>
+                            <div class="card-actions justify-center mt-2">
+                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Ver Detalhes]
+                                </a>
+                            </div>
                         </div>
-                        <h3 class="font-black text-base uppercase mb-2">[Alto Rendimento & Competições]</h3>
-                        <p class="text-xs text-base-content/70 leading-relaxed">
-                            [Treinamento técnico rigoroso, preparação física periodizada e participação em campeonatos
-                            de nível estadual, brasileiro e internacional.]
-                        </p>
                     </div>
 
-                    <div class="border border-base-300 bg-base-100 p-6">
-                        <div
-                            class="w-10 h-10 border border-base-content flex items-center justify-center font-bold text-sm mb-4">
-                            03
+                    <!-- Pilar 3: Competição / Alto Rendimento -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <div
+                                class="aspect-video w-full bg-base-200 border border-base-300 flex items-center justify-center text-xs text-base-content/50 uppercase font-bold">
+                                [IMAGEM]
+                            </div>
+                            <h3 class="card-title text-base font-black uppercase justify-center">[Competição / Alto
+                                Rendimento]</h3>
+                            <p class="text-xs text-base-content/60 text-center uppercase">
+                                [objetivo • faixa etária • horários]
+                            </p>
+                            <div class="card-actions justify-center mt-2">
+                                <a href="#atletas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Ver Detalhes]
+                                </a>
+                            </div>
                         </div>
-                        <h3 class="font-black text-base uppercase mb-2">[Ação Social Comunitária]</h3>
-                        <p class="text-xs text-base-content/70 leading-relaxed">
-                            [Portas abertas para jovens de famílias de baixa renda de Regente Feijó e região,
-                            democratizando o acesso ao esporte e aos quimonos.]
-                        </p>
                     </div>
 
                 </div>
@@ -291,7 +328,7 @@
         <!-- ========================================================== -->
         <!-- 6. CARDS POR PÚBLICO (4 SEGMENTOS)                         -->
         <!-- ========================================================== -->
-        <section id="publicos" class="py-12 md:py-16">
+        <section id="conexao" class="py-12 md:py-16">
             <div class="w-full px-4 sm:px-6 lg:px-8">
 
                 <div class="text-center max-w-2xl mx-auto mb-12">
@@ -299,68 +336,65 @@
                         UNIDA]</span>
                     <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight mt-1">[Como você se conecta ao
                         Dojo Ventura?]</h2>
+                    <p class="text-sm text-base-content/70 mt-2">
+                        [Escolha a melhor forma de fazer parte da nossa comunidade.]
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <!-- Público 1: Pais & Alunos -->
-                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
-                        <div>
-                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
-                                Alunos & Pais]</span>
-                            <h3 class="font-bold text-sm uppercase mb-2">[Iniciação & Disciplina]</h3>
+                    <!-- Bloco 1: Quero Treinar -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase self-start">
+                                [Aulas e Treinos]
+                            </span>
+                            <h3 class="card-title text-base font-black uppercase">[Quero ser Aluno / Atleta]</h3>
                             <p class="text-xs text-base-content/70 leading-relaxed">
-                                [Turmas kids e adultas. Ambiente seguro, tatame oficial e acompanhamento de evolução por
-                                graduação de faixas.]
+                                [Agende uma aula experimental e conheça nossos horários e turmas para todas as idades.]
                             </p>
+                            <div class="card-actions justify-start mt-auto">
+                                <a href="#aulas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Agendar Aula Experimental]
+                                </a>
+                            </div>
                         </div>
-                        <a href="#aulas" class="mt-4 text-xs font-bold uppercase underline">[Quero Conhecer as
-                            Aulas]</a>
                     </div>
 
-                    <!-- Público 2: Atletas -->
-                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
-                        <div>
-                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
-                                Atletas]</span>
-                            <h3 class="font-bold text-sm uppercase mb-2">[Equipe Competitiva]</h3>
+                    <!-- Bloco 2: Quero Acompanhar -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase self-start">
+                                [Conteúdo e Redes]
+                            </span>
+                            <h3 class="card-title text-base font-black uppercase">[Quero Acompanhar o Dojo]</h3>
                             <p class="text-xs text-base-content/70 leading-relaxed">
-                                [Treinos específicos de Kata e Kumite para torneios oficiais da federação e seletivas
-                                nacionais.]
+                                [Assista aos vídeos de treinos, destaques de lutas e bastidores das competições.]
                             </p>
+                            <div class="card-actions justify-start mt-auto">
+                                <a href="#atletas" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Ver Vídeos e Redes]
+                                </a>
+                            </div>
                         </div>
-                        <a href="#atletas" class="mt-4 text-xs font-bold uppercase underline">[Ver Equipe de
-                            Competição]</a>
                     </div>
 
-                    <!-- Público 3: Padrinhos / Doadores -->
-                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
-                        <div>
-                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
-                                Apoiadores PF]</span>
-                            <h3 class="font-bold text-sm uppercase mb-2">[Apadrinhamento Solidário]</h3>
+                    <!-- Bloco 3: Quero Apoiar -->
+                    <div class="card border border-base-300 bg-base-100 rounded-none">
+                        <div class="card-body gap-4">
+                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase self-start">
+                                [Projeto Social]
+                            </span>
+                            <h3 class="card-title text-base font-black uppercase">[Quero Apoiar a Causa]</h3>
                             <p class="text-xs text-base-content/70 leading-relaxed">
-                                [Contribua com qualquer valor recorrente ou pontual para pagar taxas de inscrição e
-                                passagens de um atleta.]
+                                [Apoie nossos atletas de alto rendimento e ajude a manter o projeto social ativo.]
                             </p>
+                            <div class="card-actions justify-start mt-auto">
+                                <a href="#apoiar-agora" class="btn btn-outline btn-sm rounded-none text-xs uppercase font-bold">
+                                    [Apoiar o Projeto]
+                                </a>
+                            </div>
                         </div>
-                        <a href="#apoiar-agora" class="mt-4 text-xs font-bold uppercase underline">[Fazer Doação
-                            Direta]</a>
-                    </div>
-
-                    <!-- Público 4: Empresas -->
-                    <div class="border border-base-300 p-5 bg-base-100 flex flex-col justify-between">
-                        <div>
-                            <span class="badge badge-outline rounded-none text-[10px] font-bold uppercase mb-3">[Para
-                                Empresas]</span>
-                            <h3 class="font-bold text-sm uppercase mb-2">[Patrocínio Institucional]</h3>
-                            <p class="text-xs text-base-content/70 leading-relaxed">
-                                [Associe sua marca à transformação social de jovens e leve sua logomarca aos quimonos em
-                                campeonatos de grande visibilidade.]
-                            </p>
-                        </div>
-                        <a href="#contato" class="mt-4 text-xs font-bold uppercase underline">[Falar com a
-                            Coordenação]</a>
                     </div>
 
                 </div>
@@ -1022,7 +1056,7 @@
                     [© 2026 Dojo Ventura. Todos os direitos reservados. Projeto sem fins lucrativos de incentivo ao
                     esporte.]
                 </div>
-                <div class="flex items-center gap-4 text-[11px]">
+                <div class="flex items-center gap-4 text-[11px] flex-wrap justify-center">
                     <a href="#" class="hover:underline">[Termos de Uso]</a>
                     <a href="#" class="hover:underline">[Privacidade LGPD]</a>
                     <span class="text-base-content/40">•</span>
